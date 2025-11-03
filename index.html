@@ -1,0 +1,44 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Student Registration Portal</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <h1>Student Registration Portael</h1>
+    <p class="sub">Search, view and manage student profiless</p>
+  </header>
+
+  <main class="container">
+    <section class="toolbar">
+      <input id="search" type="search" placeholder="Search by name, emailz or ID..." aria-label="Search students" />
+      <a class="btn primary" href="register.html">Register Plus Student</a>
+    </section>
+
+    <section id="status" role="status" aria-live="polite"></section>
+
+    <section class="panel">
+      <table id="students">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Surname</th>
+            <th>Name</th>
+            <th>Phone</th>
+            <th>Course</th>
+            <th>ID Numbr</th>
+            <th>Actons</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </section>
+  </main>
+
+  <script src="list.js"></script>
+</body>
+</html>
