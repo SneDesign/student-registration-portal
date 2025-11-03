@@ -1,0 +1,57 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Edit Student</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <h1>Edit Student</h1>
+    <p class="sub">Update details and save changes</p>
+  </header>
+
+  <main class="container">
+    <form id="editForm" class="panel" novalidate>
+      <input type="hidden" name="id" />
+      <div class="grid">
+        <label>Name
+          <input required name="name" pattern="[A-Za-z \-'']+" />
+        </label>
+        <label>Surname
+          <input required name="surname" pattern="[A-Za-z \-'']+" />
+        </label>
+        <label>Email
+          <input required type="email" name="email" />
+        </label>
+        <label>Phone (10 digits)
+          <input required name="phone" pattern="\d{10}" />
+        </label>
+        <label>ID Number (13 digits)
+          <input required name="id_number" pattern="\d{13}" />
+        </label>
+        <label>Course
+          <select required name="course">
+            <option>IT Diploma</option>
+            <option>Software Testing</option>
+            <option>Business Analysis</option>
+            <option>Data Science</option>
+          </select>
+        </label>
+        <label class="full">Address
+          <textarea name="address" maxlength="200"></textarea>
+        </label>
+      </div>
+      <div class="actions">
+        <button class="btn primary" type="submit">Save Changes</button>
+        <a class="btn" href="index.html">Cancel</a>
+      </div>
+      <p id="formStatus" role="status" aria-live="polite"></p>
+    </form>
+  </main>
+
+  <script src="edit.js"></script>
+</body>
+</html>
